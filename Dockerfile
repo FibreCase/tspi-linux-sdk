@@ -10,11 +10,9 @@
 # Build:
 # If you use podman, you should build with sudo to make the image in root's registry.
 # 如果你使用 podman，请用 sudo 来构建镜像，以便将镜像放在 root 的镜像库中。或者你需要手动将镜像从你的用户镜像库移动到 root 的镜像库。
-# sudo podman build -t tspi-sdk-builder:v1 .
+# sudo podman build -t tspi-sdk-builder .
 
 # Use:
-# You need to run it outside of VS Code terminal to ensure proper permissions.
-# 你需要在 VS Code 外运行。
 # Interactive - init or deconfigure:
 # sudo podman run --rm --privileged -it -v .:/mnt/sdk_work/ localhost/tspi-sdk-builder:v1 bash -c './build.sh init'
 # Non-interactive - build:

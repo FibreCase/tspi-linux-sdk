@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Tspi SDK",
+            "type": "shell",
+            "command": "sudo podman run --rm --privileged -v .:/mnt/sdk_work/ localhost/tspi-sdk-builder bash -c './build.sh'"
+        },
+        {
+            "label": "Init Tspi SDK",
+            "type": "shell",
+            "command": "sudo podman run --rm --privileged -it -v .:/mnt/sdk_work/ localhost/tspi-sdk-builder bash -c './build.sh init'",
+            "problemMatcher": []
+        }
+    ]
+}
